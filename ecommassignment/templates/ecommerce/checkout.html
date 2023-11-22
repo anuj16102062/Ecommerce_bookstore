@@ -1,0 +1,18 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+
+<main class="pt-5">
+  <div class="container">
+    <h1 class="h5">Checkout</h1>
+
+    <form method="post" action="{% url 'ecommerce:checkout' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+  </div>
+</main>
+
+{% endblock %}

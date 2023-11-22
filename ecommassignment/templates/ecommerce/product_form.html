@@ -1,0 +1,12 @@
+<!-- product_form.html -->
+
+{% extends 'ecommerce/base.html' %}
+
+{% block content %}
+  <h2>Create or Edit Product</h2>
+  <!-- <form method="post" action="{% if product.id %}{% url 'edit_product' product.id %}{% else %}{% url 'create_product' %}{% endif %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button> -->
+  </form>
+{% endblock %}
